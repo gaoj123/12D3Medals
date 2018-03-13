@@ -3,9 +3,8 @@ var germany=[14,10,7];
 var slate=document.getElementById("screen");
 var ger=document.getElementById("Germany");
 var skorea=document.getElementById("SK");
-var medalCircles=d3.selectAll("circle");
 
-var germ=function(){
+var germ=function(e){
     var x=125;
     var c1=document.createElementNS("http://www.w3.org/2000/svg", "circle");
     c1.setAttribute("cx",x);
@@ -27,11 +26,15 @@ var germ=function(){
     c3.setAttribute("r", 0);
     c3.setAttribute("fill", "bronze");
     slate.appendChild(c3);
-    medalCircles.data(germany);
-    medalCircles.attr("r",function(d) {return d*10;});
+    d3.selectAll("circle")
+	.data(germany)
+	.attr("r",function(d) {return d*5;});
+    //var medalCircles=d3.selectAll("circle");
+    //medalCircles.data(germany);
+    //medalCircles.attr("r",function(d) {return d*5;});
 };
 
-var southK=function(){
+var southK=function(e){
     var x=125;
     var c1=document.createElementNS("http://www.w3.org/2000/svg", "circle");
     c1.setAttribute("cx",x);
@@ -53,8 +56,12 @@ var southK=function(){
     c3.setAttribute("r", 0);
     c3.setAttribute("fill", "bronze");
     slate.appendChild(c3);
-    medalCircles.data(sKorea);
-    medalCircles.attr("r", function(d) {return d*10;});
+    d3.selectAll("circle")
+	.data(sKorea)
+	.attr("r",function(d) {return d*5;});
+    //var medalCircles=d3.selectAll("circle");
+    //medalCircles.data(sKorea);
+    //medalCircles.attr("r", function(d) {return d*5;});
 };
 
 skorea.addEventListener("click", southK);
