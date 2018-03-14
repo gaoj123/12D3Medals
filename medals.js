@@ -4,7 +4,7 @@ var slate=document.getElementById("screen");
 var ger=document.getElementById("Germany");
 var skorea=document.getElementById("SK");
 
-var germ=function(){
+var germ=function(e){
     var x=125;
     var c1=document.createElementNS("http://www.w3.org/2000/svg", "circle");
     c1.setAttribute("cx",x);
@@ -31,7 +31,7 @@ var germ=function(){
     medalCircles.attr("r",function(d) {return d*10;});
 };
 
-var southK=function(){
+var southK=function(e){
     var x=125;
     var c1=document.createElementNS("http://www.w3.org/2000/svg", "circle");
     c1.setAttribute("cx",x);
