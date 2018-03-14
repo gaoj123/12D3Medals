@@ -3,7 +3,6 @@ var germany=[14,10,7];
 var slate=document.getElementById("screen");
 var ger=document.getElementById("Germany");
 var skorea=document.getElementById("SK");
-var medalCircles=d3.selectAll("circle");
 
 var germ=function(){
     var x=125;
@@ -25,8 +24,9 @@ var germ=function(){
     c3.setAttribute("cx",x);
     c3.setAttribute("cy",250);
     c3.setAttribute("r", 0);
-    c3.setAttribute("fill", "bronze");
+    c3.setAttribute("fill", "#CD7F32");
     slate.appendChild(c3);
+    var medalCircles=d3.selectAll("circle");
     medalCircles.data(germany);
     medalCircles.attr("r",function(d) {return d*10;});
 };
@@ -51,8 +51,9 @@ var southK=function(){
     c3.setAttribute("cx",x);
     c3.setAttribute("cy",250);
     c3.setAttribute("r", 0);
-    c3.setAttribute("fill", "bronze");
+    c3.setAttribute("fill", "#CD7F32");
     slate.appendChild(c3);
+    var medalCircles=d3.selectAll("circle");
     medalCircles.data(sKorea);
     medalCircles.attr("r", function(d) {return d*10;});
 };
